@@ -1,0 +1,55 @@
+body {
+height: 100%;
+width: 100%;
+background-image: url("https://previews.dropbox.com/p/thumb/ABmJxP_JbfaLg0VoB0dvrIIxUA-B0f2z7OJCsMxMr1OK3-Iqz1I_tLDmJosO-gloO-KmuqFEMyxYG7N5FlhWxL8Qxr4ivJ0tCsU5pODZEnL0jIr0Kt-eAFm-M-ik7tWoWoCYxuQCkv3gOZBYkf4zJcTGQcMEZaxyARKaJl6dd0Oo2QsOmhNVAKwkb7RrWMuxPJNT-KLKOCovpano9tF3BhMe5AJHqOdtxu52Xou4Dl65Ahh2ZVCqO1QFOdcSWYkKwvZspwzroYJDHL97WiOgXOvD--YP5MiGNTaHWj06bYjPz-YZFr_cC68Ojajg6uDuUroqa0yOC8E4fJg-GDknGED0je3o89L9B9XRhe8ZfUSXckV9xDjeuvLRKa2wqZFcWhs/p.gif");
+background-position: bottom right;
+background-repeat: no-repeat;
+background-size: 40vh;
+background-color: white;
+}
+
+.content {
+text-align: center;
+background-color: #FBFBFA;
+margin: auto;
+width: 50%;
+border: 5px solid #740001;
+border-radius: 20px;
+padding: 10px;
+}
+
+.page-title {
+background-color: #740001;
+color: #EEBA30;
+border-radius: 3px;
+border-color: #EEBA30;
+}
+
+.description {
+background-color: #D9D9D9;   
+color: black;
+border-radius: 2px;
+border-color: black;
+}
+
+.text {
+background-size: 10px;
+
+}
+
+.button {
+margin: auto;
+margin-top: 25px;
+text-align: center;
+display: flex;
+background-color: #EEBA3096;
+color:#740001;
+border: 5px;
+border-color: #AE0001;
+
+}
+
+.button:hover {
+    color: #AE0001;
+
+}
