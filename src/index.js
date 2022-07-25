@@ -1,20 +1,23 @@
 import cipher from './cipher.js';
 
-document.getElementById("inputEncode").addEventListener("keyup",
+const inptEncodeCheck = document.getElementById("inputEncode");
+
+inptEncodeCheck.addEventListener("keyup",
 function encryptLettersOnly(event){
     let toBeEncodedValue = event.target.value;
-    if ((toBeEncodedValue >= 32 || toBeEncodedValue <= 64) && (toBeEncodedValue >= 91 || toBeEncodedValue <= 96) && (toBeEncodedValue >= 123 || toBeEncodedValue <= 255)){
-        window.alert("A palavra deve conter apenas letras de A a Z, sem espaçamento, pontuação ou caracteres especiais. Por favor, tente novamente.");
+    if ((toBeEncodedValue >= 33 || toBeEncodedValue <= 64) && (toBeEncodedValue >= 91 || toBeEncodedValue <= 127)){
+        window.alert("Oops! Eu só cifro palavras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
     }
     return
 })
 
-document.getElementById("inputDecode").addEventListener("keyup",
+const inptDecodeCheck = document.getElementById("inputDecode");
+
+inptDecodeCheck.addEventListener("keyup",
 function decryptLettersOnly(event){
-    let toBeEncodedValue = event.target.value;
-    if (toBeEncodedValue >= 32 || toBeEncodedValue <= 64 && toBeEncodedValue >= 91 || toBeEncodedValue <= 96 && toBeEncodedValue >= 123 || toBeEncodedValue <= 127){
-        event.preventDefault(event);
-        window.alert("A palavra deve conter apenas letras de A a Z, sem espaçamento, pontuação ou caracteres especiais. Por favor, tente novamente.");
+    let toBeDecodedValue = event.target.value;
+    if ((toBeDecodedValue >= 33 || toBeDecodedValue <= 64) && (toBeDecodedValue >= 91 || toBeDecodedValue <= 127)){
+        window.alert("Oops! Eu só decifro palavras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
     }
     return;
 })
@@ -22,7 +25,7 @@ function decryptLettersOnly(event){
 const btnEncode = document.getElementById("encodeButton");
 
 btnEncode.addEventListener("click", 
-function toEncrypt(){
+function encrypt(){
     let toBeEncoded = document.getElementById("inputEncode").value;
     toBeEncoded = toBeEncoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
@@ -33,7 +36,7 @@ function toEncrypt(){
 const btnDecode = document.getElementById("decodeButton");
 
 btnDecode.addEventListener("click", 
-function toDecrypt(){
+function decrypt(){
     let toBeDecoded = document.getElementById("inputDecode").value;
     toBeDecoded = toBeDecoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
