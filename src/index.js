@@ -41,6 +41,6 @@ function decrypt(){
     toBeDecoded = toBeDecoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
     let decodeResult = cipher.decode(shiftingAmount, toBeDecoded);
-    document.getElementById("resultado").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"'
+    document.getElementById("resultado").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
 })
 
