@@ -6,49 +6,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
+    <div id="root" class="header">
       <h1>Cifra de César</h1>
+      <a href="https://dribbble.com/friedagienji" target="_blank">Background art by Federica Gangi</a>
     </div>
     
       <div class="content">
+
         <div class="page-title">
           <h2>Harry Potter e o Enigma da Cifra</h2>
         </div>
 
         <div class="description">
       <h3>
-        Harry, Ron e Hermione têm uma nova missão: precisam decifrar e cifrar 
+        Harry, Hermione e Ron têm uma nova missão: precisam criptografar e descriptografar
         mensagens para a ordem da Fênix sem que Lord Voldemort descubra. Que tal ajudá-los nessa nova aventura?
         </h3></div>
 
-        <div class="offset-options">
-        Escolha chave de deslocamento:
-        <input type="radio" name="optionOne" value="one">
-        <label for="optionOne">Desloque uma letra</label>
-        <input type="radio" name="optionTwo" value="two">
-        <label for="optionTwo">Desloque duas letras</label>
-        </div> 
-     
+        <div class="inptboxes">
+        Escolha o deslocamento:
+      <p><input type="number" id="offsetKey" name="offset" min="1" max="100" class="input"></p>
       <h4>
-        Digite a mensagem que gostaria de cifrar para a Ordem, aqui: <p>
+        Digite a mensagem que gostaria de criptografar abaixo: 
+      <p><textarea id="inputEncode" name="input-encode" class="input" rows="4" cols="25" required></textarea></p>
 
-        <input type="text" id="cipher" placeholder="Digite sua mensagem" name="text-example" class="text" required/>
-      </p><p>
-        Ou
-      </p><p>
-        Digite a mensagem que gostaria de decifrar para a Ordem, aqui: <p>
-          <input type="text" id="decipher" placeholder="Digite sua mensagem" name="text-example" class="text" required/>
-        </p>
-      </p>
+      <p><button type="submit" id="encodeButton" name="encodeButton" class="button">Criptografar</button></p>
+
+        Digite a mensagem que gostaria de descriptografar abaixo:
+      <p><textarea id="inputDecode" name="input-decode" class="input" rows="4" cols="25" required></textarea></p>
       </h4>
+
+      <button type="submit" id="decodeButton" name="decodeButton" class="button">Descriptografar</button>
     </div>
-    <button type="submit" class="button" onclick="send()">Enviar e ver resultado</button>
-      <div id="result"></div>
-   
+    </div>   
 
-    
-    
+    <div id="resultado" class="output"></div>
 
-    <script src="index.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
