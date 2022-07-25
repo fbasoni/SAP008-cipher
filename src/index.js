@@ -1,9 +1,5 @@
 import cipher from './cipher.js';
 
-//to do: block user from typing numbers in text (encode and decode) inputs; block user from typing numbers in number input (done, but...)
-//but... I still need to block some pontuation marks and special characters
-//to do: get it to work with keypress instead of keyup; get it to work with an array for the letters (is it possible to (?))
-
 document.getElementById("inputEncode").addEventListener("keyup",
 function encryptLettersOnly(event){
     let toBeEncodedValue = event.target.value;
