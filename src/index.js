@@ -3,8 +3,7 @@ import cipher from './cipher.js';
 document.getElementById("inputEncode").addEventListener("keyup",
 function encryptLettersOnly(event){
     let toBeEncodedValue = event.target.value;
-    if (toBeEncodedValue >= 32 || toBeEncodedValue <= 64 && toBeEncodedValue >= 91 || toBeEncodedValue <= 96 && toBeEncodedValue >= 123 || toBeEncodedValue <= 255){
-        event.preventDefault(event);
+    if ((toBeEncodedValue >= 32 || toBeEncodedValue <= 64) && (toBeEncodedValue >= 91 || toBeEncodedValue <= 96) && (toBeEncodedValue >= 123 || toBeEncodedValue <= 255)){
         window.alert("A palavra deve conter apenas letras de A a Z, sem espaçamento, pontuação ou caracteres especiais. Por favor, tente novamente.");
     }
     return
