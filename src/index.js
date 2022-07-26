@@ -30,7 +30,7 @@ function encrypt(){
     toBeEncoded = toBeEncoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
     let encodeResult = cipher.encode(shiftingAmount, toBeEncoded);
-    document.getElementById("resultado").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
+    document.getElementById("displayedResult").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
 })
 
 const btnDecode = document.getElementById("decodeButton");
@@ -41,6 +41,6 @@ function decrypt(){
     toBeDecoded = toBeDecoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
     let decodeResult = cipher.decode(shiftingAmount, toBeDecoded);
-    document.getElementById("resultado").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
+    document.getElementById("displayedResult").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
 })
 

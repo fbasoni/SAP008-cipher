@@ -3,7 +3,7 @@ height: 95vh;
 width: 100%;
 background-image: url("https://previews.dropbox.com/p/thumb/ABmJxP_JbfaLg0VoB0dvrIIxUA-B0f2z7OJCsMxMr1OK3-Iqz1I_tLDmJosO-gloO-KmuqFEMyxYG7N5FlhWxL8Qxr4ivJ0tCsU5pODZEnL0jIr0Kt-eAFm-M-ik7tWoWoCYxuQCkv3gOZBYkf4zJcTGQcMEZaxyARKaJl6dd0Oo2QsOmhNVAKwkb7RrWMuxPJNT-KLKOCovpano9tF3BhMe5AJHqOdtxu52Xou4Dl65Ahh2ZVCqO1QFOdcSWYkKwvZspwzroYJDHL97WiOgXOvD--YP5MiGNTaHWj06bYjPz-YZFr_cC68Ojajg6uDuUroqa0yOC8E4fJg-GDknGED0je3o89L9B9XRhe8ZfUSXckV9xDjeuvLRKa2wqZFcWhs/p.gif");
 background-position: bottom right;
-background-repeat: repeat-x;
+background-repeat: no-repeat;
 background-size: 35rem;
 background-color: white;
 }
