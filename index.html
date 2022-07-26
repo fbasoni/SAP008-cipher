@@ -2,46 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Cifra de César</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root" class="header">
-      Cifra de César
-      <a href="https://dribbble.com/friedagienji" target="_blank">Background art by Federica Gangi</a>
+    <div id="root">
+      <h1>Projeto 1: Cifra</h1>
     </div>
-    
       <div class="content">
-
-        <div class="page-title">
-          <h1>Harry Potter e o Enigma da Cifra</h1>
-        </div>
-
-    <div class="description">
-      Você é uma pessoa Potterhead, usuária assídua do Correio-Coruja?
-      <p>O Correio-Coruja-Cryptor é pra você!</p> 
+          <div class="page-title"><h2>Harry Potter e o Enigma da Cifra</h2>
+          </div>
+          <div class="description">Criptografe mensagens e compartilhe-as com amigos para que eles possam desvendar o Enigma da Cifra
+          </div>
+          <div class="inptboxes"><p>Escolha o deslocamento (de 1 a 100):</p>
+            <input type="number" id="offsetKey" name="offset" min="1" max="100">
+            <h3>Digite a mensagem que gostaria de criptografar abaixo:</h3> 
+            <textarea id="inputEncode" name="input-encode" placeholder="Digite aqui" rows="4" cols="25" required></textarea>
+            <button type="submit" id="encodeButton" name="encodeButton" class="button">Criptografar</button>
+            <h3>Digite a mensagem que gostaria de descriptografar abaixo:</h3>
+            <textarea id="inputDecode" name="input-decode" class="input" placeholder="Digite aqui" rows="4" cols="25" required></textarea>
+            <button type="submit" id="decodeButton" name="decodeButton" class="button">Descriptografar</button>
+          </div>  
       </div>
-
-        <div class="inptboxes">
-        Criptografe e descriptografe palavras e envie-as para seus amigos desvendarem o Enigma da Cifra!
-        <p>Escolha o deslocamento:</p>
-      <p><input type="number" id="offsetKey" name="offset" min="1" max="100" class="input"></p>
-      <h4>
-        Digite a mensagem que gostaria de criptografar abaixo: 
-      <p><textarea id="inputEncode" name="input-encode" class="input" placeholder="Digite aqui" rows="4" cols="25" required></textarea></p>
-
-      <p><button type="submit" id="encodeButton" name="encodeButton" class="button">Criptografar</button></p>
-
-        Digite a mensagem que gostaria de descriptografar abaixo:
-      <p><textarea id="inputDecode" name="input-decode" class="input" placeholder="Digite aqui" rows="4" cols="25" required></textarea></p>
-      </h4>
-
-      <button type="submit" id="decodeButton" name="decodeButton" class="button">Descriptografar</button>
-    </div>
-    </div>   
-
-    <div id="resultado" class="output"></div>
-
+  <div id="displayedResult" class="output">
+  </div>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
