@@ -2,11 +2,11 @@ const cipher = {encode, decode}
 
 function encode (offset, encryptText) {
   if (typeof offset != "number"){
-    throw TypeError()
+    throw TypeError("Invalid parameters")
   }
 
   if (typeof encryptText != "string"){
-    throw TypeError()
+    throw TypeError("Invalid parameters")
   }
 
   let encryptationResult = "";
@@ -21,17 +21,17 @@ function encode (offset, encryptText) {
 
 function decode (offset, decryptText) {
   if (typeof offset != "number"){
-    throw TypeError()
+    throw TypeError("Invalid parameters")
   }
   if (typeof decryptText != "string"){
-    throw TypeError()
+    throw TypeError("Invalid parameters")
   }
 
 
   let decryptationResult = "";
 
   for (let i = 0; i < decryptText.length; i++){
-      let decryptation = ((decryptText.charCodeAt(i) - 90 - offset) % 26) + 90; 
+      let decryptation = ((decryptText.charCodeAt(i) - 65 - offset) % 26) + 65; 
       let decryptedText = String.fromCharCode(decryptation);
       decryptationResult += decryptedText;
   }
