@@ -45,34 +45,46 @@ a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
 Este projeto foi o primeiro dos projetos desenvolvidos durante o Bootcamp da turma SAP008, da Laboratória Brasil.
 
-Se trata de uma aplicação web de cifragem utilizando HTML, CSS e JavaScript como ferramentas. A lógica do projeto seguiu o sistema de cifragem da Cifra de César, possibillitando que o usuário cifre ou decifre um texto indicando uma chave de deslocamento.
-Foi desenvolvido com base em um protótipo de baixa fidelidade produzido utilizando a ferramenta Figma. Como pode ser observado na imagem abaixo.
+Se trata de uma aplicação web de cifragem utilizando HTML, CSS e JavaScript como ferramentas. A lógica do projeto teve como base o sistema de cifragem da Cifra de César, possibillitando que o usuário cifre ou decifre um texto indicando uma chave de deslocamento.
+Foi desenvolvido com base em um protótipo de baixa fidelidade produzido utilizando a ferramenta Figma. Como pode ser observado na imagem abaixo:
 
-O tema foi pensado como uma "brincadeira" de cifragem, de modo que a aplicação fornece ao usuário o resultado cifrado do texto digitado, pelo usuário, na área de texto, para que o ele possa enviar o texto cifrado para outra pessoa tentar decifrar. Além disso, a aplicação também fornece a decifragem do texto digitado, caso o usuário, ou a outra pessoa participante da "brincadeira", necessitarem. 
+![Protótipo Projeto 1](https://github.com/fbasoni/SAP008-cipher/blob/main/Prot%C3%B3tipo%20projeto%20cifra%20de%20c%C3%A9sar.png?raw=true)
 
-Considerando que o tema do projeto foi pensado para a aplicação ser um tipo de "brincadeira", o nome do projeto foi baseado em um trocadilho relacionado ao mundo "Harry Potter" (Harry Potter e o Enigma do Princípe). Embora os elementos de design (cores, imagem de fundo) e o próprio nome do projeto façam alusão a este mundo, o público-alvo deste projeto pode ser qualquer pessoa que gostaria de utilizar um mecanismo de cifragem de textos.
+O tema foi pensado como um "jogo" de enigma; o usuário digita um texto na caixa de texto e a aplicação fornece a versão cifrada do texto, e decifrada caso o texto já esteja cifrado. E o resultado retornado pode ser compartilhado, com outras pessoas, pelo usuário, a modo de que elas possam tentar decifrar o texto. E, caso não consigam, a aplicação também fornece a possibilidade de decifragem. 
 
+Considerando que o tema do projeto foi pensado para a aplicação ser um tipo de "brincadeira", o nome do projeto foi baseado em um trocadilho relacionado ao mundo Harry Potter ("Harry Potter e o Enigma do Princípe"). Embora alguns elementos de design (cores, imagem de fundo) e o próprio nome do projeto façam alusão a este mundo, o público-alvo deste projeto pode ser qualquer pessoa que gostaria de utilizar um mecanismo de cifragem de textos, com opção de decifragem.
 
-### Interface do usuário (UI)
+### 2.2 Interface do usuário (UI)
 
-O a interface do projeto foi pensada a modo de permirtir que o usuário:
+A interface do projeto foi pensada a modo de permirtir que o usuário:
 
 * Escolha um número indicando quantas posições de deslocamento de caracteres a cifragem deve utilizar;
 * Insira uma mensagem (texto) para ser cifrada;
 * Consiga ver o resultado da mensagem cifrada ao apertar o botão de cifrar.
 * Insira uma mensagem (texto) para ser decifrada;
 * Consiga ver o resultado da mensagem decifrada ao apertar o botão decifrar.
-A interface deve permitir ao usuário:
+Além disso, caso o usuário tente digitar número ao invés de letras de A a Z, ele recebe uma mensagem de alerta pedindo que seu texto apenas contenha letras.
 
-### Estrutura de organização dos arquivos
+Pensando em uma melhor experiência para o usuário, a interface do projeto final se diferenciou do protótipo de baixa fidelidade nos seguintes pontos:
+
+- Incremento de um novo botão, ficando um para cifrar e um para decifrar, ficando claros a ação desejada (cifrar ou decifrar) e o resultado retornado;
+- Área de caixa de texto maior, para melhor visualização do próprio texto escrito;
+- Mudança da descrição, a modo de abranger um público-alvo maior que o conhecedor do mundo Harry Potter, uma vez que essa aplicação pode atender a necessidade de qualquer usuário que precise utilizar um mecanismo de cifragem de texto. 
+
+### 2.3 Estrutura de organização dos arquivos
 A estruturação dos arquivos da aplicação web se dá da seguinte forma:
 * index.html contém o código de estruturação da página web;
 * style.css contém o código de estilização da página web;
 * cipher.js contém a lógica do código para o mecanismo de cifragem e de decifragem;
 * index.js contém a lógica do código de manipulação do DOM com interação do usuário na página.
-### Ferramentas Utilizadas
 
-* Figma (protótipo);
+### 2.4 Ferramentas Utilizadas no projeto
+* Figma (para o protótipo);
+* Visual Studio Code (para desenvolver o código);
+* Notion (para o planning);
+* Git
+
+### Stacks utilizadas no projeto 
 * HTML;
 * CSS;
-* Vanilla JavaScript.
+* JavaScript (vanilla).
