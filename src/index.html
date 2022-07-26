@@ -5,28 +5,27 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body> 
+  <body>
+    <div id="root">
+      <h1>Projeto 1: Cifra</h1>
+    </div>
       <div class="content">
-          <div class="page-title"><h1>Harry Potter e o Enigma da Cifra</h1></div>
-
-          <div class="description">Bem-vindo, Potterhead! Criptografe mensagens e compartilhe-as com outras pessoas para que elas possam desvendar o Enigma da Cifra!</div>
-
+          <div class="page-title"><h2>Harry Potter e o Enigma da Cifra</h2>
+          </div>
+          <div class="description">Bem-vindo, Potterhead! Criptografe mensagens e compartilhe-as com outras pessoas para que elas possam desvendar o Enigma da Cifra!
+          </div>
           <div class="inptboxes"><p>Escolha o deslocamento:</p>
-            <p><input type="number" id="offsetKey" name="offset" min="1" max="100"></p>
-            <h2>
-            Digite a mensagem que gostaria de criptografar abaixo: 
-            <p><textarea id="inputEncode" name="input-encode" placeholder="Digite aqui" rows="4" cols="25" required></textarea></p>
-
-            <p><button type="submit" id="encodeButton" name="encodeButton" class="button">Criptografar</button></p>
-            Digite a mensagem que gostaria de descriptografar abaixo:
-            <p><textarea id="inputDecode" name="input-decode" class="input" placeholder="Digite aqui" rows="4" cols="25" required></textarea></p>
-            </h2>
+            <input type="number" id="offsetKey" name="offset" min="1" max="100"></p>
+            <h3>Digite a mensagem que gostaria de criptografar abaixo:</h3> 
+            <textarea id="inputEncode" name="input-encode" placeholder="Digite aqui" rows="4" cols="25" required></textarea>
+            <button type="submit" id="encodeButton" name="encodeButton" class="button">Criptografar</button></p>
+            <h3>Digite a mensagem que gostaria de descriptografar abaixo:</h3>
+            <textarea id="inputDecode" name="input-decode" class="input" placeholder="Digite aqui" rows="4" cols="25" required></textarea>
             <button type="submit" id="decodeButton" name="decodeButton" class="button">Descriptografar</button>
-            </div>
-        </div>   
-
-    <div id="resultado" class="output"></div>
-
+          </div>  
+      </div>
+  <div id="resultado" class="output">
+  </div>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
