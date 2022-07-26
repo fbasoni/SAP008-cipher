@@ -31,7 +31,7 @@ function decode (offset, decryptText) {
   let decryptationResult = "";
 
   for (let i = 0; i < decryptText.length; i++){
-      let decryptation = ((decryptText.charCodeAt(i) - 65 - offset) % 26) + 65; 
+      let decryptation = ((decryptText.charCodeAt(i) - 90 - offset) % 26) + 90; 
       let decryptedText = String.fromCharCode(decryptation);
       decryptationResult += decryptedText;
   }
