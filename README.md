@@ -45,7 +45,7 @@ a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
 Este projeto foi o primeiro dos projetos desenvolvidos durante o Bootcamp da turma SAP008, da Laboratória Brasil.
 
-Se trata de uma aplicação web de cifragem utilizando HTML, CSS e JavaScript como ferramentas. A lógica do projeto teve como base o sistema de cifragem da Cifra de César, possibillitando que o usuário cifre ou decifre um texto indicando uma chave de deslocamento.
+Se trata de uma aplicação web de cifragem utilizando HTML, CSS e JavaScript como ferramentas de programação. A lógica do projeto teve como base o sistema de cifragem da Cifra de César, possibillitando que o usuário cifre ou decifre um texto indicando uma chave de deslocamento.
 Foi desenvolvido com base em um protótipo de baixa fidelidade produzido utilizando a ferramenta Figma. Como pode ser observado na imagem abaixo:
 
 ![Protótipo Projeto 1](https://github.com/fbasoni/SAP008-cipher/blob/main/Prot%C3%B3tipo%20projeto%20cifra%20de%20c%C3%A9sar.png?raw=true)
@@ -78,13 +78,13 @@ A estruturação dos arquivos da aplicação web se dá da seguinte forma:
 * cipher.js contém a lógica do código para o mecanismo de cifragem e de decifragem;
 * index.js contém a lógica do código de manipulação do DOM com interação do usuário na página.
 
-### 2.4 Ferramentas Utilizadas no projeto
+### 2.4 Ferramentas utilizadas no projeto
 * Figma (para o protótipo);
 * Visual Studio Code (para desenvolver o código);
 * Notion (para o planning);
 * Git
 
-### Stacks utilizadas no projeto 
+### 2.5 Ferramentas de programação utilizadas no projeto 
 * HTML;
 * CSS;
 * JavaScript (vanilla).
