@@ -1,6 +1,14 @@
 const cipher = {encode, decode}
 
 function encode (offset, encryptText) {
+  if (typeof offset != "number"){
+    throw TypeError("Invalid parameters")
+  }
+
+  if (typeof encryptText != "string"){
+    throw TypeError("Invalid parameters")
+  }
+
   let encryptationResult = "";
 
   for (let i = 0; i < encryptText.length; i++){
@@ -12,6 +20,14 @@ function encode (offset, encryptText) {
 }
 
 function decode (offset, decryptText) {
+  if (typeof offset != "number"){
+    throw TypeError("Invalid parameters")
+  }
+  if (typeof decryptText != "string"){
+    throw TypeError("Invalid parameters")
+  }
+
+
   let decryptationResult = "";
 
   for (let i = 0; i < decryptText.length; i++){
