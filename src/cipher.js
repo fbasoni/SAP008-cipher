@@ -1,41 +1,41 @@
 const cipher = {encode, decode}
 
-function encode (offset, encryptText) {
+function encode (offset, encodeText) {
   if (typeof offset != "number"){
-    throw TypeError("Invalid parameters")
+    throw new TypeError("The parameter isn't a number.")
   }
 
-  if (typeof encryptText != "string"){
-    throw TypeError("Invalid parameters")
+  if (typeof encodeText != "string"){
+    throw new TypeError("The parameter isn't a letter.")
   }
 
-  let encryptationResult = "";
+  let encodeResult = "";
 
-  for (let i = 0; i < encryptText.length; i++){
-    let encryptation = ((encryptText.charCodeAt(i) - 65 + offset) % 26) + 65;
-    let encryptedText = String.fromCharCode(encryptation);
-    encryptationResult += encryptedText;
+  for (let i = 0; i < encodeText.length; i++){
+    let asciiEncode = ((encodeText.charCodeAt(i) - 65 + offset) % 26) + 65;
+    let encodedText = String.fromCharCode(asciiEncode);
+    encodeResult += encodedText;
   }
-  return encryptationResult;
+  return encodeResult;
 }
 
-function decode (offset, decryptText) {
+function decode (offset, decodeText) {
   if (typeof offset != "number"){
     throw TypeError("Invalid parameters")
   }
-  if (typeof decryptText != "string"){
+  if (typeof decodeText != "string"){
     throw TypeError("Invalid parameters")
   }
 
 
-  let decryptationResult = "";
+  let decodeResult = "";
 
-  for (let i = 0; i < decryptText.length; i++){
-      let decryptation = ((decryptText.charCodeAt(i) - 90 - offset) % 26) + 90; 
-      let decryptedText = String.fromCharCode(decryptation);
-      decryptationResult += decryptedText;
+  for (let i = 0; i < decodeText.length; i++){
+      let asciiDecode = ((decodeText.charCodeAt(i) - 90 - offset) % 26) + 90; 
+      let decodedText = String.fromCharCode(asciiDecode);
+      decodeResult += decodedText;
   }
-    return decryptationResult; 
+    return decodeResult; 
 }
 
 export default cipher;
