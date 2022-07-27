@@ -4,13 +4,10 @@
 
 * [1. Prefácio](#1-prefácio)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínimos do projeto](#5-critérios-de-aceitação-mínimos-do-projeto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Considerações técnicas](#7-considerações-técnicas)
-* [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
+* [3. Interface do usuário](#3-interface-do-usuário)
+* [4. Estrutura de organização dos arquivos](#4-estrutura-de-organização)
+* [5. Ferramentas utilizadas no projeto](#5-ferramentas-utilizadas)
+* [6. Ferramentas de programação utilizadas no projeto](#6-ferramentas-de-programação-utilizadas-no-projeto)
 
 ***
 
@@ -54,7 +51,7 @@ O tema foi pensado como um "jogo" de enigma; o usuário digita um texto na caixa
 
 Considerando que o tema do projeto foi pensado para a aplicação ser um tipo de "brincadeira", o nome do projeto foi baseado em um trocadilho relacionado ao mundo Harry Potter ("Harry Potter e o Enigma do Princípe"). Embora alguns elementos de design (cores, imagem de fundo) e o próprio nome do projeto façam alusão a este mundo, o público-alvo deste projeto pode ser qualquer pessoa que gostaria de utilizar um mecanismo de cifragem de textos, com opção de decifragem.
 
-### 2.2 Interface do usuário (UI)
+### 3 Interface do usuário (UI)
 
 A interface do projeto foi pensada a modo de permirtir que o usuário:
 
@@ -71,20 +68,20 @@ Pensando em uma melhor experiência para o usuário, a interface do projeto fina
 - Área de caixa de texto maior, para melhor visualização do próprio texto escrito;
 - Mudança da descrição, a modo de abranger um público-alvo maior que o conhecedor do mundo Harry Potter, uma vez que essa aplicação pode atender a necessidade de qualquer usuário que precise utilizar um mecanismo de cifragem de texto. 
 
-### 2.3 Estrutura de organização dos arquivos
+### 4 Estrutura de organização dos arquivos
 A estruturação dos arquivos da aplicação web se dá da seguinte forma:
 * index.html contém o código de estruturação da página web;
 * style.css contém o código de estilização da página web;
 * cipher.js contém a lógica do código para o mecanismo de cifragem e de decifragem;
 * index.js contém a lógica do código de manipulação do DOM com interação do usuário na página.
 
-### 2.4 Ferramentas utilizadas no projeto
+### 5 Ferramentas utilizadas no projeto
 * Figma (para o protótipo);
 * Visual Studio Code (para desenvolver o código);
 * Notion (para o planning);
 * Git
 
-### 2.5 Ferramentas de programação utilizadas no projeto 
+### 6 Ferramentas de programação utilizadas no projeto 
 * HTML;
 * CSS;
 * JavaScript (vanilla).
