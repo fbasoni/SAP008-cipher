@@ -8,7 +8,7 @@ function encryptLettersOnly(event){
     if ((toBeEncodedValue >= 33 || toBeEncodedValue <= 64) && (toBeEncodedValue >= 91 || toBeEncodedValue <= 127)){
         window.alert("Oops! Eu só cifro palavras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
     }
-    return
+    return;
 })
 
 const inptDecodeCheck = document.getElementById("inputDecode");
@@ -30,7 +30,7 @@ function encrypt(){
     toBeEncoded = toBeEncoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
     let encodeResult = cipher.encode(shiftingAmount, toBeEncoded);
-    document.getElementById("displayedResult").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
+    return document.getElementById("displayedResult").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
 })
 
 const btnDecode = document.getElementById("decodeButton");
@@ -41,6 +41,6 @@ function decrypt(){
     toBeDecoded = toBeDecoded.toUpperCase();
     let shiftingAmount = parseInt(document.getElementById("offsetKey").value);
     let decodeResult = cipher.decode(shiftingAmount, toBeDecoded);
-    document.getElementById("displayedResult").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
+    return document.getElementById("displayedResult").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
 })
 
