@@ -27,7 +27,6 @@ function decode (offset, decodeText) {
     throw TypeError("Invalid parameters")
   }
 
-
   let decodeResult = "";
 
   for (let i = 0; i < decodeText.length; i++){
