@@ -26,9 +26,8 @@ const btnEncode = document.getElementById("encodeButton");
 
 btnEncode.addEventListener("click", 
 function displayEncodeResult(){
-    let encodeText = document.getElementById("encodeTextArea").value;
-    encodeText = encodeText.toUpperCase();
     let offset = parseInt(document.getElementById("offsetInput").value);
+    let encodeText = (document.getElementById("encodeTextArea").value).toUpperCase();
     let encodeResult = cipher.encode(offset, encodeText);
 
     return document.getElementById("displayedResult").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
@@ -38,10 +37,9 @@ const btnDecode = document.getElementById("decodeButton");
 
 btnDecode.addEventListener("click",     
 function displayDecodeResult(){
-    let decodeText = document.getElementById("decodeTextArea").value;
-    decodeText = decodeText.toUpperCase();
-    let offsetKey = parseInt(document.getElementById("offsetInput").value);
-    let decodeResult = cipher.decode(offsetKey, decodeText);
+    let offset = parseInt(document.getElementById("offsetInput").value);
+    let decodeText = (document.getElementById("decodeTextArea").value).toUpperCase();
+    let decodeResult = cipher.decode(offset, decodeText);
 
     return document.getElementById("displayedResult").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
 })
