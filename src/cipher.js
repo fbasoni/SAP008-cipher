@@ -1,12 +1,8 @@
 const cipher = {encode, decode}
 
 function encode (offset, encodeText) {
-  if (typeof offset != "number"){
-    throw new TypeError("The parameter isn't a number.")
-  }
-
-  if (typeof encodeText != "string"){
-    throw new TypeError("The parameter isn't a letter.")
+  if (typeof offset != "number" || typeof encodeText != "string"){
+    throw new TypeError("Invalid data type.")
   }
 
   let encodeResult = "";
@@ -20,11 +16,8 @@ function encode (offset, encodeText) {
 }
 
 function decode (offset, decodeText) {
-  if (typeof offset != "number"){
-    throw TypeError("Invalid parameters")
-  }
-  if (typeof decodeText != "string"){
-    throw TypeError("Invalid parameters")
+  if (typeof offset != "number" || typeof decodeText != "string"){
+    throw new TypeError("Invalid data type.")
   }
 
   let decodeResult = "";
