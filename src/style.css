@@ -9,6 +9,7 @@ background-color: rgb(232, 224, 206);
 }
 
 .page-title {
+text-align: center;
 margin-top: 4%;
 justify-content: center;
 align-self: center;
@@ -18,12 +19,9 @@ background-color: #810c0ce6;
 color: white;
 }
 
-.content {
-text-align: center;
-}
-
 .description {
 width: fit-content;
+text-align: center;
 margin: auto;
 justify-content: center;
 align-self: center;
@@ -38,6 +36,7 @@ border-style: double;
 }
 
 .inputcontent {
+text-align: center;
 width: fit-content;
 margin: auto;
 justify-content: center;
