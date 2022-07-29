@@ -26,22 +26,22 @@ const btnEncode = document.getElementById("encodeButton");
 
 btnEncode.addEventListener("click", 
 function displayEncodeResult(){
-    let encodedText = document.getElementById("encodeTextArea").value;
-    encodedText = encodedText.toUpperCase();
-    let offsetKey = parseInt(document.getElementById("offsetInput").value);
-    let encodeResult = cipher.encode(offsetKey, encodedText);
+    let encodeText = document.getElementById("encodeTextArea").value;
+    encodeText = encodeText.toUpperCase();
+    let offset = parseInt(document.getElementById("offsetInput").value);
+    let encodeResult = cipher.encode(offset, encodeText);
 
     return document.getElementById("displayedResult").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
 })
 
 const btnDecode = document.getElementById("decodeButton");
 
-btnDecode.addEventListener("click", 
+btnDecode.addEventListener("click",     
 function displayDecodeResult(){
-    let decodedText = document.getElementById("decodeTextArea").value;
-    decodedText = decodedText.toUpperCase();
+    let decodeText = document.getElementById("decodeTextArea").value;
+    decodeText = decodeText.toUpperCase();
     let offsetKey = parseInt(document.getElementById("offsetInput").value);
-    let decodeResult = cipher.decode(offsetKey, decodedText);
+    let decodeResult = cipher.decode(offsetKey, decodeText);
 
     return document.getElementById("displayedResult").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
 })
