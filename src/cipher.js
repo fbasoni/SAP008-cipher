@@ -2,7 +2,7 @@ const cipher = {encode, decode}
 
 function encode (offset, encodeText) {
   if (typeof offset != "number" || typeof encodeText != "string"){
-    throw new TypeError("Invalid data type.")
+    throw new TypeError("Invalid data type.") 
   }
 
   let encodeResult = "";

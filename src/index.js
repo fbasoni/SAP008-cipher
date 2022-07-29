@@ -4,9 +4,9 @@ const encodeTextCheck = document.getElementById("encodeTextArea");
 
 encodeTextCheck.addEventListener("keyup",
 function encodeLettersOnly(event){
-    let textToBeEncodedValue = event.target.value;
-    if ((textToBeEncodedValue >= 32 || textToBeEncodedValue <= 64) && (textToBeEncodedValue >= 91 || textToBeEncodedValue <= 255)){
-        window.alert("Oops! Eu só cifro palavras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
+    let encodedTextValue = event.target.value;
+    if ((encodedTextValue >= 32 || encodedTextValue <= 64) && (encodedTextValue >= 91 || encodedTextValue <= 255)){
+        window.alert("Oops! Eu só cifro letras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
     }
     return;
 })
@@ -15,9 +15,9 @@ const decodeTextCheck = document.getElementById("decodeTextArea");
 
 decodeTextCheck.addEventListener("keyup",
 function decodeLettersOnly(event){
-    let textToBeDecodedValue = event.target.value;
-    if ((textToBeDecodedValue >= 32 || textToBeDecodedValue <= 64) && (textToBeDecodedValue >= 91 || textToBeDecodedValue <= 255)){
-        window.alert("Oops! Eu só decifro palavras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
+    let decodedTextValue = event.target.value;
+    if ((decodedTextValue >= 32 || decodedTextValue <= 64) && (decodedTextValue >= 91 || decodedTextValue <= 255)){
+        window.alert("Oops! Eu só decifro letras. Por favor, digite apenas letras de A a Z (sem pontuação, acentos ou caracteres especiais) e tente novamente.");
     }
     return;
 })
@@ -25,11 +25,11 @@ function decodeLettersOnly(event){
 const btnEncode = document.getElementById("encodeButton");
 
 btnEncode.addEventListener("click", 
-function encoding(){
-    let textToBeEncoded = document.getElementById("encodeTextArea").value;
-    textToBeEncoded = textToBeEncoded.toUpperCase();
+function displayEncodeResult(){
+    let encodedText = document.getElementById("encodeTextArea").value;
+    encodedText = encodedText.toUpperCase();
     let offsetKey = parseInt(document.getElementById("offsetInput").value);
-    let encodeResult = cipher.encode(offsetKey, textToBeEncoded);
+    let encodeResult = cipher.encode(offsetKey, encodedText);
 
     return document.getElementById("displayedResult").innerHTML = "A mensagem criptografada é: " + '"' + encodeResult + '"';
 })
@@ -37,11 +37,11 @@ function encoding(){
 const btnDecode = document.getElementById("decodeButton");
 
 btnDecode.addEventListener("click", 
-function decoding(){
-    let textToBeDecoded = document.getElementById("decodeTextArea").value;
-    textToBeDecoded = textToBeDecoded.toUpperCase();
+function displayDecodeResult(){
+    let decodedText = document.getElementById("decodeTextArea").value;
+    decodedText = decodedText.toUpperCase();
     let offsetKey = parseInt(document.getElementById("offsetInput").value);
-    let decodeResult = cipher.decode(offsetKey, textToBeDecoded);
+    let decodeResult = cipher.decode(offsetKey, decodedText);
 
     return document.getElementById("displayedResult").innerHTML = "A mensagem descriptografada é: " + '"' + decodeResult + '"';
 })
